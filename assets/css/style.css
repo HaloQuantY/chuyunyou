@@ -136,8 +136,9 @@ a {
   text-decoration: none;
 }
 .wrapper {
-  width: 1152px;
   margin: 0 auto;
+  width: 1152px;
+  min-width: 1152px;
 }
 body {
   font-family: "PingFangSC-Regular";
@@ -211,7 +212,7 @@ body {
 }
 .site-header .topbar .wrapper .shortcut-links > li.have-menu .menu .menu-list li a {
   line-height: 20px;
-  color: #1C1F21;
+  color: #1c1f21;
 }
 .site-header .topbar .wrapper .shortcut-links > li.have-menu .menu .menu-list li a:hover {
   color: orange;
@@ -260,7 +261,7 @@ body {
 }
 .site-header .main-nav {
   height: 40px;
-  background: #20BD9A;
+  background: #20bd9a;
 }
 .site-header .main-nav .wrapper ul > li {
   float: left;
@@ -302,7 +303,7 @@ body {
   margin-right: 8px;
   line-height: 20px;
   font-size: 12px;
-  color: #1C1F21;
+  color: #1c1f21;
 }
 .site-header .main-nav .wrapper ul > li.have-menu .menu dl dd a:hover {
   color: orange;
@@ -323,7 +324,7 @@ body {
   display: block;
 }
 .site-header .main-nav .wrapper ul > li.have-menu::before {
-  content: '';
+  content: "";
   position: absolute;
   right: 0;
   top: 50%;
@@ -352,14 +353,14 @@ body {
   line-height: 36px;
   font-size: 24px;
   font-weight: 700;
-  color: #20BD9A;
+  color: #20bd9a;
 }
 .site-header .header-content .wrapper .search-box {
   float: left;
   position: relative;
   width: 405px;
   height: 30px;
-  border: 1px solid #20BD9A;
+  border: 1px solid #20bd9a;
   border-radius: 4px;
 }
 .site-header .header-content .wrapper .search-box input {
@@ -382,5 +383,155 @@ body {
   line-height: 32px;
   font-size: 20px;
   color: #fff;
-  background: #20BD9A;
+  background: #20bd9a;
+}
+.banner {
+  position: relative;
+}
+.banner .bannerImg {
+  width: 100%;
+  min-width: 1152px;
+  vertical-align: middle;
+}
+.banner .wrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: auto;
+  margin-left: -576px;
+  width: 1152px;
+  height: 100%;
+}
+.banner .wrapper > a {
+  position: absolute;
+  width: 28px;
+  height: 44px;
+  opacity: 0.6;
+  background: #000000;
+  border-radius: 3px;
+}
+.banner .wrapper > a:hover {
+  opacity: 0.4;
+}
+.banner .wrapper > a.leftbtn {
+  top: 50%;
+  left: -38px;
+  margin-top: -22px;
+  background-image: url("../images/icons.png");
+  background-position: -21px -94px;
+}
+.banner .wrapper > a.rightbtn {
+  top: 50%;
+  right: -38px;
+  margin-top: -22px;
+  background-image: url("../images/icons.png");
+  background-position: -21px -29px;
+}
+.banner .wrapper .banner-nav {
+  height: 100%;
+}
+.banner .wrapper .banner-nav .banner-list {
+  height: 100%;
+}
+.banner .wrapper .banner-nav .banner-list > li {
+  position: relative;
+  box-sizing: border-box;
+  width: 296px;
+  height: 16.66%;
+  background: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.banner .wrapper .banner-nav .banner-list > li dl {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  margin-top: -24px;
+  height: 48px;
+  color: #FFFFFF;
+}
+.banner .wrapper .banner-nav .banner-list > li dl dt {
+  height: 26px;
+  line-height: 26px;
+  font-size: 18px;
+}
+.banner .wrapper .banner-nav .banner-list > li dl dd {
+  float: left;
+  margin-right: 6px;
+  height: 22px;
+  font-size: 14px;
+  line-height: 22px;
+}
+.banner .wrapper .banner-nav .banner-list > li dl dd:last-child {
+  margin-right: 0;
+}
+.banner .wrapper .banner-nav .banner-list > li::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  margin-top: -12px;
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/icons.png');
+}
+.banner .wrapper .banner-nav .banner-list > li.hot::before {
+  background-position: -30px -400px;
+}
+.banner .wrapper .banner-nav .banner-list > li.home::before {
+  background-position: -28px -217px;
+}
+.banner .wrapper .banner-nav .banner-list > li.jp::before {
+  background-position: -26px -172px;
+}
+.banner .wrapper .banner-nav .banner-list > li.sa::before {
+  background-position: -28px -263px;
+}
+.banner .wrapper .banner-nav .banner-list > li.eur::before {
+  background-position: -29px -350px;
+}
+.banner .wrapper .banner-nav .banner-list > li.aus::before {
+  background-position: -28px -306px;
+}
+.banner .wrapper .banner-nav .banner-list > li:last-child {
+  border: none;
+}
+.banner .wrapper .banner-nav .banner-list > li:hover {
+  opacity: 0.7;
+  background: #1C1F21;
+}
+.banner .wrapper .banner-nav .menu-box li.current {
+  display: block;
+}
+.banner .wrapper .banner-nav .menu-box .menu {
+  display: none;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 296px;
+  padding: 16px;
+  width: 356px;
+  height: 100%;
+  background: #1c1f21b4;
+}
+.banner .wrapper .banner-nav .menu-box .menu dl {
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+.banner .wrapper .banner-nav .menu-box .menu dl a {
+  color: #fff;
+}
+.banner .wrapper .banner-nav .menu-box .menu dl dt {
+  margin-bottom: 8px;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+.banner .wrapper .banner-nav .menu-box .menu dl dd {
+  float: left;
+  margin-right: 8px;
+  line-height: 25px;
+  font-size: 14px;
+  font-weight: 400;
 }

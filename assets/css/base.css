@@ -6,6 +6,7 @@ a {
   text-decoration: none;
 }
 .wrapper {
-  width: 1152px;
   margin: 0 auto;
+  width: 1152px;
+  min-width: 1152px;
 }
