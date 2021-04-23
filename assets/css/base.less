@@ -10,3 +10,9 @@ a {
   width: 1152px;
   min-width: 1152px;
 }
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
