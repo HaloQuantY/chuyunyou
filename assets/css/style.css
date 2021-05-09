@@ -406,12 +406,47 @@ body {
   background: #20bd9a;
 }
 .banner {
+  overflow: hidden;
   position: relative;
 }
-.banner .bannerImg {
+.banner .carousel-list {
+  overflow: hidden;
+  width: 600%;
+  transition: transform 0.5s ease 0s;
+}
+.banner .carousel-list li {
+  float: left;
+  width: 16.666%;
+}
+.banner .carousel-list li img {
   width: 100%;
-  min-width: 1152px;
   vertical-align: middle;
+}
+.banner .circles {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  margin-left: -75px;
+  width: 150px;
+  height: 20px;
+  z-index: 9999;
+}
+.banner .circles li {
+  float: left;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: width 0.3s linear 0s;
+}
+.banner .circles li:last-child {
+  margin-right: 0;
+}
+.banner .circles li.current-circle {
+  width: 30px;
+  background-color: #20bd9a;
 }
 .banner .wrapper {
   position: absolute;
@@ -448,6 +483,7 @@ body {
   background-position: -21px -29px;
 }
 .banner .wrapper .banner-nav {
+  width: 631px;
   height: 100%;
 }
 .banner .wrapper .banner-nav .banner-list {
@@ -520,9 +556,6 @@ body {
   opacity: 0.7;
   background: #1c1f21;
 }
-.banner .wrapper .banner-nav .menu-box li.current {
-  display: block;
-}
 .banner .wrapper .banner-nav .menu-box .menu {
   overflow: hidden;
   display: none;
@@ -534,6 +567,10 @@ body {
   width: 356px;
   height: 100%;
   background: #1c1f21b4;
+}
+.banner .wrapper .banner-nav .menu-box .menu.current {
+  display: block;
+  z-index: 99999;
 }
 .banner .wrapper .banner-nav .menu-box .menu dl {
   overflow: hidden;
@@ -1156,4 +1193,17 @@ footer .bottom-part .wrapper .content .links li:last-child {
 footer .bottom-part .wrapper .content .cprt {
   font-size: 14px;
   line-height: 22px;
+}
+.backToTop {
+  display: -none;
+  position: fixed;
+  right: 80px;
+  bottom: 80px;
+  padding-top: 20px;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  color: #000;
+  background-color: #ccc;
+  box-sizing: border-box;
 }

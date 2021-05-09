@@ -221,17 +221,40 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> 
   </header>
 
   <section class="banner">
-    <img src="./assets/images/banner1.jpg" alt="" class="bannerImg">
+    <ul class="carousel-list">
+      <li>
+        <img src="./assets/images/banner1.jpg" alt="">
+      </li>
+      <li>
+        <img src="./assets/images/banner2.jpg" alt="">
+      </li>
+      <li>
+        <img src="./assets/images/banner3.jpg" alt="">
+      </li>
+      <li>
+        <img src="./assets/images/banner4.jpg" alt="">
+      </li>
+      <li>
+        <img src="./assets/images/banner5.jpg" alt="">
+      </li>
+    </ul>
+    <ol class="circles">
+      <li class="current-circle" data-n="0"></li>
+      <li data-n="1"></li>
+      <li data-n="2"></li>
+      <li data-n="3"></li>
+      <li data-n="4"></li>
+    </ol>
     <div class="wrapper">
-      <a href="#" class="leftbtn"></a>
-      <a href="#" class="rightbtn"></a>
+      <a href="javascript:;" class="leftbtn"></a>
+      <a href="javascript:;" class="rightbtn"></a>
       <nav class="banner-nav">
         <ul class="banner-list">
-          <li class="hot">
+          <li class="hot" data-t="hot">
             <dl>
               <dt>热门出发地</dt>
               <dd>北京</dd>
@@ -241,7 +264,7 @@
               <dd>国内其他</dd>
             </dl>
           </li>
-          <li class="home">
+          <li class="home" data-t="home">
             <dl>
               <dt>港澳台 国内</dt>
               <dd>香港</dd>
@@ -250,7 +273,7 @@
               <dd>国内其他</dd>
             </dl>
           </li>
-          <li class="jp">
+          <li class="jp" data-t="jp">
             <dl>
               <dt>日本 韩国</dt>
               <dd>东京</dd>
@@ -260,7 +283,7 @@
               <dd>福冈</dd>
             </dl>
           </li>
-          <li class="sa">
+          <li class="sa" data-t="sa">
             <dl>
               <dt>东南亚 南亚</dt>
               <dd>泰国</dd>
@@ -269,7 +292,7 @@
               <dd>马尔代夫</dd>
             </dl>
           </li>
-          <li class="eur">
+          <li class="eur" data-t="eur">
             <dl>
               <dt>欧洲 美洲</dt>
               <dd>英国</dd>
@@ -278,7 +301,7 @@
               <dd>加拿大</dd>
             </dl>
           </li>
-          <li class="aus">
+          <li class="aus" data-t="aus">
             <dl>
               <dt>澳新 中东非</dt>
               <dd>澳大利亚</dd>
@@ -288,7 +311,7 @@
           </li>
         </ul>
         <ul class="menu-box">
-          <li class="menu current">
+          <li class="menu" data-t="hot">
             <dl>
               <dt>港澳台</dt>
               <dd><a href="#">香港</a></dd>
@@ -358,7 +381,7 @@
               <dd><a href="#">重庆两江夜游船票</a></dd>
             </dl>
           </li>
-          <li class="menu">
+          <li class="menu" data-t="home">
             <dl>
               <dt>港澳台</dt>
               <dd><a href="#">香港</a></dd>
@@ -375,7 +398,7 @@
               <dd><a href="#">台湾美食</a></dd>
             </dl>
           </li>
-          <li class="menu">
+          <li class="menu" data-t="jp">
             <dl>
               <dt>日本</dt>
               <dd><a href="#">东京</a></dd>
@@ -401,7 +424,7 @@
               <dd><a href="#">富士山日游</a></dd>
             </dl>
           </li>
-          <li class="menu">
+          <li class="menu" data-t="sa">
             <dl>
               <dt>泰新马</dt>
               <dd><a href="#">普吉岛</a></dd>
@@ -459,7 +482,7 @@
               <dd><a href="#">亚美尼亚</a></dd>
             </dl>
           </li>
-          <li class="menu">
+          <li class="menu" data-t="eur">
             <dl>
               <dt>欧洲</dt>
               <dd><a href="#">法国</a></dd>
@@ -534,7 +557,7 @@
               <dd><a href="#">羚羊峡谷+马蹄湾</a></dd>
             </dl>
           </li>
-          <li class="menu">
+          <li class="menu" data-t="aus">
             <dl>
               <dt>澳新 南太平洋</dt>
               <dd><a href="#">墨尔本</a></dd>
@@ -1280,6 +1303,12 @@
       </div>
     </div>
   </footer>
+
+  <a href="javascript:;" class="backToTop">返回<br>顶部</a>
+
+  <script src="assets/js/carousel.js"></script>
+  <script src="assets/js/back_to_top.js"></script>
+  <script src="assets/js/menu.js"></script>
 </body>
 
 </html>

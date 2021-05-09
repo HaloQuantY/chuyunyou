@@ -263,11 +263,46 @@ body {
   }
 }
 .banner {
+  overflow: hidden;
   position: relative;
-  .bannerImg {
-    width: 100%;
-    min-width: 1152px;
-    vertical-align: middle;
+  .carousel-list {
+    overflow: hidden;
+    width: 600%;
+    transition: transform .5s ease 0s;
+    li {
+      float: left;
+      width: 16.666%;
+      img {
+        width: 100%;
+        vertical-align: middle;
+      }
+    }
+  }
+  .circles {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    margin-left: -75px;
+    width: 150px;
+    height: 20px;
+    z-index: 9999;
+    li {
+      float: left;
+      margin-right: 10px;
+      width: 20px;
+      height: 20px;
+      background-color: #eee;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: width .3s linear 0s;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.current-circle {
+        width: 30px;
+        background-color: #20bd9a;
+      }
+    }
   }
   .wrapper {
     position: absolute;
@@ -303,6 +338,7 @@ body {
       background-position: -21px -29px;
     }
     .banner-nav {
+      width: 631px;
       height: 100%;
       .banner-list {
         height: 100%;
@@ -375,9 +411,6 @@ body {
         }
       }
       .menu-box {
-        li.current {
-          display: block;
-        }
         .menu {
           overflow: hidden;
           display: none;
@@ -389,6 +422,10 @@ body {
           width: 356px;
           height: 100%;
           background: #1c1f21b4;
+          &.current {
+            display: block;
+            z-index: 99999;
+          }
           dl {
             overflow: hidden;
             margin-bottom: 12px;
@@ -1041,4 +1078,17 @@ footer {
       }
     }
   }
+}
+.backToTop {
+  display: -none;
+  position: fixed;
+  right: 80px;
+  bottom: 80px;
+  padding-top: 20px;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  color: #000;
+  background-color: #ccc;
+  box-sizing: border-box;
 }
